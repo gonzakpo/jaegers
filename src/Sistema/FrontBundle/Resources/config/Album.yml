@@ -1,0 +1,42 @@
+entityName: 'Album'
+entity: 'Sistema\FrontBundle\Entity\Album'
+repository: 'SistemaFrontBundle:Album'
+index: 'admin_album'
+new: 'admin_album_new'
+edit: 'admin_album_edit'
+show: 'admin_album_show'
+create: 'admin_album_create'
+update: 'admin_album_update'
+delete: 'admin_album_delete'
+sessionFilter: 'AlbumControllerFilter'
+fieldsindex:    
+    a.id:
+        name: 'Id'
+        type: 'integer'    
+    a.titulo:
+        name: 'Titulo'
+        type: 'string'    
+    a.lugar:
+        name: 'Lugar'
+        type: 'string'    
+    a.anio:
+        name: 'Anio'
+        type: 'date'
+        date: 'Y-m-d'
+fieldsshow:
+    a.id:
+        name: 'Id'
+        type: 'integer'
+    a.titulo:
+        name: 'Titulo'
+        type: 'string'
+    a.lugar:
+        name: 'Lugar'
+        type: 'string'
+    a.anio:
+        name: 'Anio'
+        type: 'date'
+        date: 'Y-m-d'
+    a.imagenes:
+        name: 'Imagenes'
+        type: 'ONE_TO_MANY'

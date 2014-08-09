@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_row(form.titulo) }}
+    {{ form_row(form.lugar) }}
+    {{ form_row(form.anio) }}
+    {%  include 'SistemaFrontBundle:Album:imagenes.field.html.twig' with { 'imagenes' : form.imagenes } %}
+    {{ form_row(form.save) }}
+    {{ form_row(form.saveAndAdd) }}
+    {{ form_row(form._token) }}
+{{ form_end(form) }}

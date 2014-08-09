@@ -1,0 +1,32 @@
+{% macro imagenesAlbum(imagen) %}
+    <div class="row-container rowremove">
+        <div class="col-lg-12">    
+            <div class="row-fluid">
+                <div class="col-lg-5">
+                    {{ form_row(imagen.file) }}
+                </div>
+                <div class="col-lg-5">
+                    {{ form_row(imagen.descripcion) }}
+                </div>
+                <div class="col-lg-2">    
+                    <a class="delete_imagenes btn btn-mini btn-danger" href="#">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+</br>
+</br>
+<div>
+    <label class="required">Imagenes</label>
+    <div data-prototype="{{ _self.imagenesAlbum(form.imagenes.vars.prototype)|e }}" class="imagenes-publicidad">
+        <div>
+        {% for imagen in imagenes %}
+            {{ _self.imagenesAlbum(imagen) }}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+</br>
