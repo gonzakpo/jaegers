@@ -1,0 +1,10 @@
+sistema_front:
+    resource: "@SistemaFrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+sistema_back:
+    resource: "@SistemaBackBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
