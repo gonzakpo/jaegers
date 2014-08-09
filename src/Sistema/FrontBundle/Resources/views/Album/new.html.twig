@@ -25,4 +25,11 @@
     {{ parent() }}
     <script src="{{ asset('bundles/mwsimpleadmincrud/js/addForm.js') }}"></script>
     <script src="{{ asset('bundles/sistemafront/js/embed-imagenes.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <script src="{{ asset('bundles/sistemafront/js/autocomplete-place.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			initialize();
+		});
+	</script>
 {% endblock %}
