@@ -157,6 +157,7 @@ class Album
      */
     public function addImagene(\Sistema\FrontBundle\Entity\ImagenAlbum $imagenes)
     {
+        $imagenes->setAlbum($this);
         $this->imagenes[] = $imagenes;
 
         return $this;

@@ -21,7 +21,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/mapa", name="mapa")
+     * @Route("/", name="mapa")
      * @Template()
      */
     public function mapaAction()
