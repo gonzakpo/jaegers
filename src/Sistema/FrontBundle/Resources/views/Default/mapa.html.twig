@@ -54,8 +54,8 @@
 	</div>
 {% endblock %}
 
-{% block javascript %}
-    {{ parent() }}
+{% block javascripts %}
+    {#{ parent() }#}
     <script src="{{ asset('bundles/sistemafront/js/autocomplete-place.js') }}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
