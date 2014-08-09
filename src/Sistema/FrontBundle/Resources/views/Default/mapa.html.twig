@@ -21,6 +21,8 @@
 				geocoder.geocode({'address': "{{ direccion }}"}, function(results, status) {
 		            if (status == google.maps.GeocoderStatus.OK) {
 	                    coords.push(results[0].geometry.location);
+	                    console.log(coords.length);
+	                    console.log("{{ direcciones|length  }}");
 	                    if(coords.length == {{ direcciones|length  }}) {
 	                        updateMapFunction(coords);
 	                    }
