@@ -47,6 +47,20 @@ class Album
      */
     private $imagenes;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lat", type="string", length=255)
+     */
+    private $lat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lng", type="string", length=255)
+     */
+    private $lng;
+
 
     /**
      * Constructor
@@ -166,5 +180,51 @@ class Album
     public function getImagenes()
     {
         return $this->imagenes;
+    }
+
+    /**
+     * Set lat
+     *
+     * @param string $lat
+     * @return Album
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+
+        return $this;
+    }
+
+    /**
+     * Get lat
+     *
+     * @return string 
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Set lng
+     *
+     * @param string $lng
+     * @return Album
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+
+        return $this;
+    }
+
+    /**
+     * Get lng
+     *
+     * @return string 
+     */
+    public function getLng()
+    {
+        return $this->lng;
     }
 }

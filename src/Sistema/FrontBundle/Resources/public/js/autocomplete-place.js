@@ -28,11 +28,12 @@ function initialize() {
 function fillInAddress() {
   // Get the place details from the autocomplete object.
   var place = autocomplete.getPlace();
-
-  for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
-  }
+  $('#sistema_frontbundle_album_lat').val(place.geometry.location.lat());
+  $('#sistema_frontbundle_album_lng').val(place.geometry.location.lng());
+  // for (var component in componentForm) {
+    // document.getElementById(component).value = '';
+    // document.getElementById(component).disabled = false;
+  // }
 
   // Get each component of the address from the place details
   // and fill the corresponding field on the form.
@@ -40,7 +41,7 @@ function fillInAddress() {
     var addressType = place.address_components[i].types[0];
     if (componentForm[addressType]) {
       var val = place.address_components[i][componentForm[addressType]];
-      document.getElementById(addressType).value = val;
+      // document.getElementById(addressType).value = val;
     }
   }
 }

@@ -12,4 +12,26 @@ use Doctrine\ORM\EntityRepository;
  */
 class AlbumRepository extends EntityRepository
 {
+	public function findAlbumes($data)
+    {
+    	$lat1 = $data->getLat() - 5;
+		$lat2 = $data->getLat() + 5;
+		$lng1 = $data->getLng() - 5;
+		$lng2 = $data->getLng() + 5;
+
+        return $this->createQueryBuilder('a')
+        	->select('a.lugar')
+            ->where('a.lat <= :lat1')
+            ->andWhere('a.lat >= :lat2')
+            ->andWhere('a.lng <= :lng1')
+            ->andWhere('a.lng >= :lng2')
+            ->setParameter('lat1', $lat1)
+            ->setParameter('lat2', $lat2)
+            ->setParameter('lng1', $lng1)
+            ->setParameter('lng2', $lng2)
+            ->orderBy('a.id', 'DESC')
+	        ->getQuery()
+	        ->getArrayResult()
+        ;
+    }
 }

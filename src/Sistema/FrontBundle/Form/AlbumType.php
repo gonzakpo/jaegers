@@ -23,27 +23,27 @@ class AlbumType extends AbstractType
     {
         $builder
             ->add('titulo')
-            // ->add('lugar')
-            ->add('lugar', 'places_autocomplete', array(
-                // Javascript prefix variable
-                'prefix' => 'js_prefix_',
-                // Autocomplete bound (array|Ivory\GoogleMap\Base\Bound)
-                // 'bound'  => $bound,
-                // Autocomplete types
-                'types'  => array(
-                    AutocompleteType::CITIES,
-                    // ...
-                ),
-                // Autocomplete component restrictions
-                'component_restrictions' => array(
-                    AutocompleteComponentRestriction::COUNTRY => 'es',
-                    // ...
-                ),
-                // TRUE if the autocomplete is loaded asynchonously else FALSE
-                'async' => false,
-                // Autocomplete language
-                'language' => 'es',
-            ))
+            ->add('lugar')
+            // ->add('lugar', 'places_autocomplete', array(
+            //     // Javascript prefix variable
+            //     'prefix' => 'js_prefix_',
+            //     // Autocomplete bound (array|Ivory\GoogleMap\Base\Bound)
+            //     // 'bound'  => $bound,
+            //     // Autocomplete types
+            //     'types'  => array(
+            //         AutocompleteType::CITIES,
+            //         // ...
+            //     ),
+            //     // Autocomplete component restrictions
+            //     'component_restrictions' => array(
+            //         AutocompleteComponentRestriction::COUNTRY => 'ar',
+            //         // ...
+            //     ),
+            //     // TRUE if the autocomplete is loaded asynchonously else FALSE
+            //     'async' => false,
+            //     // Autocomplete language
+            //     'language' => 'es',
+            // ))
             // ->add('lugar', null, array(
             //     // 'label' => 'pagina.tabla.direccion',
             //     // 'translation_domain' => 'MWSBundle',
@@ -72,6 +72,8 @@ class AlbumType extends AbstractType
                 'by_reference' => false,
                 'label'        => false,               
             ))
+            ->add('lat', "hidden")
+            ->add('lng', "hidden")
         ;
     }
     
