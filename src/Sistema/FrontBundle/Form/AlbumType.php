@@ -21,6 +21,16 @@ class AlbumType extends AbstractType
         $builder
             ->add('titulo')
             ->add('lugar')
+            // ->add('lugar', null, array(
+            //     // 'label' => 'pagina.tabla.direccion',
+            //     // 'translation_domain' => 'MWSBundle',
+            //     'attr' => array(
+            //         'class'       => 'span5 mwstooltip',
+            //         'data-toggle' => "tooltip",
+            //         'title'       => "Ej: San Martín 879 - Resistencia Chaco",
+            //     ),
+            //     // 'required' => false,
+            // ))
             ->add('anio', 'bootstrapdatetime', array(
                 'required'   => true,
                 'label'      => 'Anio',
