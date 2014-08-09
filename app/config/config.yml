@@ -77,3 +77,8 @@ knp_paginator:
     template:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig # bootstrap 3 sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+mw_simple_admin_crud:
+    menu:
+        child: { name: Inicio, url: mws_admin_crud_menu }
+        album: { name: Album, url: admin_album }

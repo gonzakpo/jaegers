@@ -8,3 +8,7 @@ sistema_back:
     type:     annotation
     prefix:   /
 
+mw_simple_admin_crud:
+    resource: "@MWSimpleAdminCrudBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
