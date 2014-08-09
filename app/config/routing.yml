@@ -12,3 +12,8 @@ mw_simple_admin_crud:
     resource: "@MWSimpleAdminCrudBundle/Controller/"
     type:     annotation
     prefix:   /admin
+
+usuario:
+    resource: "@SistemaUserBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
