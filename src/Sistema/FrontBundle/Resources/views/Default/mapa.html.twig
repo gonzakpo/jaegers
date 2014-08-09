@@ -1,11 +1,11 @@
-{% extends 'MWSimpleAdminCrudBundle:Default:new.html.twig' %}
-
-{% block menu %}{% endblock %}
+{% extends "SistemaFrontBundle::layout.html.twig" %}
 
 {% block title %}Mapa{% endblock %}
 
-{% block page %}
+{% block content %}
 	{% form_theme form 'MWSimpleAdminCrudBundle:widget:fields.html.twig' %}
+	<div id="page-wrapper" >
+        <div id="page-inner">
 	<div class="panel-body">
 		{{ form(form) }}
 	</div>
@@ -50,6 +50,8 @@
 	</script>
 
 	<div id="map-canvas" style="width:100%; height:300px"></div>
+	</div>
+	</div>
 {% endblock %}
 
 {% block javascript %}
