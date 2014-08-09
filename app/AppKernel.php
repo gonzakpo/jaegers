@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             //propios
             new Sistema\BackBundle\SistemaBackBundle(),
             new Sistema\FrontBundle\SistemaFrontBundle(),
+            new Sistema\UserBundle\SistemaUserBundle(),
             //terceros
             new FOS\UserBundle\FOSUserBundle(),
             new MWSimple\Bundle\AdminCrudBundle\MWSimpleAdminCrudBundle(),
