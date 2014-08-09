@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+use Ivory\GoogleMap\Places\AutocompleteComponentRestriction;
+use Ivory\GoogleMap\Places\AutocompleteType;
+
 /**
  * AlbumType form.
  * @author Nombre Apellido <name@gmail.com>
@@ -20,7 +23,27 @@ class AlbumType extends AbstractType
     {
         $builder
             ->add('titulo')
-            ->add('lugar')
+            // ->add('lugar')
+            ->add('lugar', 'places_autocomplete', array(
+                // Javascript prefix variable
+                'prefix' => 'js_prefix_',
+                // Autocomplete bound (array|Ivory\GoogleMap\Base\Bound)
+                // 'bound'  => $bound,
+                // Autocomplete types
+                'types'  => array(
+                    AutocompleteType::CITIES,
+                    // ...
+                ),
+                // Autocomplete component restrictions
+                'component_restrictions' => array(
+                    AutocompleteComponentRestriction::COUNTRY => 'es',
+                    // ...
+                ),
+                // TRUE if the autocomplete is loaded asynchonously else FALSE
+                'async' => false,
+                // Autocomplete language
+                'language' => 'es',
+            ))
             // ->add('lugar', null, array(
             //     // 'label' => 'pagina.tabla.direccion',
             //     // 'translation_domain' => 'MWSBundle',
