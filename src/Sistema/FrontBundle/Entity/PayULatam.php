@@ -433,7 +433,7 @@ class PayULatam
     *    
     * @return $randomString
     */
-    public function generateRandomString($length)
+    public function generateRandomString($length = 5)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $randomString = '';

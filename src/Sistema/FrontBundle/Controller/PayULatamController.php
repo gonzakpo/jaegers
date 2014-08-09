@@ -166,36 +166,45 @@ class PayULatamController extends Controller
     */
     private function createFormPay($config, $entity)
     {
+        $apiKey = "012345678901";
+        $merchantId = "1";
+        $referenceCode = $entity->generateRandomString();
+        $amount = "500";
+        $currency = "ARS";
+        $stringToHash = $apiKey . "~" . $merchantId . "~" . $referenceCode . "~" . $amount . "~" . $currency;
+        $signature = md5($stringToHash);
         $url     = $this->generateUrl('service_response');
-        $baseUrl = $this->generateUrl('admin_album_new');
+        $baseUrl = $this->generateUrl('admin_payulatam_new', array(), true);
         $entity->setResponseUrl($url, 
             array(
                 'code' => '1',
             ),
             true
         ); 
+        $entity->setMerchantId($merchantId);
         $entity->setUrlOrigen($baseUrl);    
+        $entity->setCurrency($currency);
+        $entity->setAmount($amount);
+        $entity->setReferenceCode($referenceCode);
+        $entity->setSignature($signature);
+        $entity->setLng('es');
+        $entity->setShipmentValue(0);
+        $entity->setSourceUrl('a');
         $form = $this->createForm($config['newType'], $entity, array(
+            'attr' => array(
+                'class' => 'formPay',
+            ),
             'action' => 'https://stg.gateway.payulatam.com/ppp-web-gateway/',
             'method' => 'POST',
         ));
 
-        /*form*/
-            //->add(
-                //'save', 'submit', array(
-                //'translation_domain' => 'MWSimpleAdminCrudBundle',
-                //'label'              => 'views.new.save',
-                //'attr'               => array('class' => 'btn btn-success col-lg-2')
-                //)
-            //)
-            //->add(
-                //'saveAndAdd', 'submit', array(
-                //'translation_domain' => 'MWSimpleAdminCrudBundle',
-                //'label'              => 'views.new.saveAndAdd',
-                //'attr'               => array('class' => 'btn btn-primary col-lg-2 col-lg-offset-1')
-                //)
-            //)
-        /*;*/
+        $form
+            ->add(
+                'save', 'submit', array(
+                'translation_domain' => 'MWSimpleAdminCrudBundle',
+                'label'              => 'Premium',
+                'attr'               => array('class' => 'btn btn-success col-lg-2')
+                ));
 
         return $form;
     }

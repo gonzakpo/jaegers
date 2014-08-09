@@ -20,24 +20,35 @@ class PayULatamType extends AbstractType
     {
         $builder                                      
             ->add('merchantId', 'hidden', array(
-                    'data' => '123456',
+                    'data' => '1',
                     ) 
                 )
             ->add('accountId', 'hidden', array(
                     'data' => '9',
                     ) 
                 )
-            ->add('description')
-            ->add('referenceCode')
-            ->add('amount')
-            ->add('tax')
-            ->add('taxReturnBase')
-            ->add('shipmentValue')
-            ->add('currency')
-            ->add('lng')
-            ->add('sourceUrl')
-            ->add('signature')
-            ->add('urlOrigen', 'hidden', array())
+                ->add('description', 'hidden', array(
+                    'data' => "Servicio Premium",
+                )
+                )
+            ->add('referenceCode','hidden')
+            ->add('amount', 'hidden')
+            ->add('tax', 'hidden', array(
+                'data' => '0'
+                )
+            )
+            ->add('taxReturnBase','hidden', array(
+                'data' => '0'
+                )
+            )
+            ->add('shipmentValue', 'hidden')
+            ->add('currency', 'hidden')
+            ->add('lng', 'hidden')
+            ->add('sourceUrl', 'hidden')
+            ->add('signature', 'hidden')
+            ->add('urlOrigen', 'hidden', array(
+                )
+            )
             ->add('buttonType', 'hidden', array(                
                 'mapped' => false,
                 'data'   => 'SIMPLE',

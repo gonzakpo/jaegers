@@ -11,23 +11,16 @@
                 <div class="panel panel-default center-block">
                     <div class="panel-heading">
                         <h3 class="panel-title center-block">
-                            Adquirir el servicio premium
+                            Adquirir el servicio Premium por 500$ pesos Argentinos
                         </h3>
                     </div>
                     <div class="panel-body">
                         {{ form_start(form) }}
                         {{ form(form) }}
-            <input type="image" border="0" alt="" src="http://www.payulatam.com/img_botones_herramientas/boton_pagar_mediano.png" onClick="this.form.urlOrigen.value = window.location.href;"/>
                         {{ form_end(form) }}
                     </div>
                 </div>
-                <div class="col-lg-9">
-                    <div class="float-left col-lg-3">
-                        <a class="btn btn-info col-lg-11" href="{{ path(config.index) }}">
-                            {{ 'views.recordactions.backtothelist'|trans({}, 'MWSimpleAdminCrudBundle') }}
-                        </a>
-                    </div>
-                </div>
+
         </div>
     </div>
 {% endblock %}

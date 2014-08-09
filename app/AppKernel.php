@@ -26,7 +26,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Lexik\Bundle\FormFilterBundle\LexikFormFilterBundle(),
-            new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
+            //new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
