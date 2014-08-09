@@ -1,0 +1,97 @@
+entityName: 'PayULatam'
+entity: 'Sistema\FrontBundle\Entity\PayULatam'
+repository: 'SistemaFrontBundle:PayULatam'
+index: 'admin_payulatam'
+new: 'admin_payulatam_new'
+edit: 'admin_payulatam_edit'
+show: 'admin_payulatam_show'
+create: 'admin_payulatam_create'
+update: 'admin_payulatam_update'
+delete: 'admin_payulatam_delete'
+sessionFilter: 'PayULatamControllerFilter'
+fieldsindex:    
+    a.id:
+        name: 'Id'
+        type: 'integer'    
+    a.merchantId:
+        name: 'Merchantid'
+        type: 'string'    
+    a.accountId:
+        name: 'Accountid'
+        type: 'string'    
+    a.description:
+        name: 'Description'
+        type: 'string'    
+    a.referenceCode:
+        name: 'Referencecode'
+        type: 'string'    
+    a.amount:
+        name: 'Amount'
+        type: 'string'    
+    a.tax:
+        name: 'Tax'
+        type: 'string'    
+    a.taxReturnBase:
+        name: 'Taxreturnbase'
+        type: 'string'    
+    a.shipmentValue:
+        name: 'Shipmentvalue'
+        type: 'string'    
+    a.currency:
+        name: 'Currency'
+        type: 'string'    
+    a.lng:
+        name: 'Lng'
+        type: 'string'    
+    a.sourceUrl:
+        name: 'Sourceurl'
+        type: 'string'    
+    a.buttonType:
+        name: 'Buttontype'
+        type: 'string'    
+    a.signature:
+        name: 'Signature'
+        type: 'string'
+fieldsshow:
+    a.id:
+        name: 'Id'
+        type: 'integer'
+    a.merchantId:
+        name: 'Merchantid'
+        type: 'string'
+    a.accountId:
+        name: 'Accountid'
+        type: 'string'
+    a.description:
+        name: 'Description'
+        type: 'string'
+    a.referenceCode:
+        name: 'Referencecode'
+        type: 'string'
+    a.amount:
+        name: 'Amount'
+        type: 'string'
+    a.tax:
+        name: 'Tax'
+        type: 'string'
+    a.taxReturnBase:
+        name: 'Taxreturnbase'
+        type: 'string'
+    a.shipmentValue:
+        name: 'Shipmentvalue'
+        type: 'string'
+    a.currency:
+        name: 'Currency'
+        type: 'string'
+    a.lng:
+        name: 'Lng'
+        type: 'string'
+    a.sourceUrl:
+        name: 'Sourceurl'
+        type: 'string'
+    a.buttonType:
+        name: 'Buttontype'
+        type: 'string'
+    a.signature:
+        name: 'Signature'
+        type: 'string'
